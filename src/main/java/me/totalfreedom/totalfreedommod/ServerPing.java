@@ -55,7 +55,7 @@ public class ServerPing extends FreedomService
             return;
         }
 
-        String infernomc = "Welcome to InfernoMC!\nTFM: %mcversion%\nServer: 1.11.2!";
+        String infernomc = "Welcome to InfernoMC!\nOur server is only for 1.11.2 players currently!";
         
         String baseMotd = infernomc.replace("%mcversion%", plugin.si.getVersion());
         baseMotd = baseMotd.replace("\\n", "\n");

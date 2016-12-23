@@ -139,10 +139,6 @@ public class RankManager extends FreedomService
         boolean isAdmin = plugin.al.isAdmin(player);
         if (isAdmin)
         {
-            fPlayer.setCommandSpy(true);
-        }
-        if (isAdmin)
-        {
             // Verify strict IP match
             if (!plugin.al.isIdentityMatched(player))
             {
@@ -154,6 +150,7 @@ public class RankManager extends FreedomService
                 fPlayer.setSuperadminIdVerified(true);
                 plugin.al.updateLastLogin(player);
             }
+            fPlayer.setCommandSpy(true);
         }
 
         // Handle impostors
@@ -166,6 +163,7 @@ public class RankManager extends FreedomService
             player.setGameMode(GameMode.SURVIVAL);
             plugin.pl.getPlayer(player).getFreezeData().setFrozen(true);
             player.sendMessage(ChatColor.RED + "You are marked as an impostor, please verify yourself!");
+            fPlayer.setCommandsBlocked(true);
             return;
         }
 
@@ -184,7 +182,7 @@ public class RankManager extends FreedomService
                 }
             }
 
-            FUtil.bcastMsg(ChatColor.AQUA + player.getName() + " is " + loginMsg);
+            FUtil.bcastMsg(ChatColor.RED + "" + ChatColor.BOLD + player.getName() + " is " + loginMsg);
             plugin.pl.getPlayer(player).setTag(display.getColoredTag());
 
             String displayName = display.getColor() + player.getName();

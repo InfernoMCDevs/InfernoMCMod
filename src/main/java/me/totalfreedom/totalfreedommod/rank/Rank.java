@@ -9,9 +9,11 @@ public enum Rank implements Displayable
     IMPOSTOR("an", "Impostor", Type.PLAYER, "Imp", ChatColor.YELLOW),
     NON_OP("a", "Non-Op", Type.PLAYER, "", ChatColor.GREEN),
     OP("an", "Op", Type.PLAYER, "OP", ChatColor.RED),
-    SUPER_ADMIN("a", "Super Admin", Type.ADMIN, "SA", ChatColor.AQUA),
+    SUPER_ADMIN("a", "Super Admin", Type.ADMIN, "SA", ChatColor.GOLD),
     TELNET_ADMIN("a", "Telnet Admin", Type.ADMIN, "STA", ChatColor.DARK_GREEN),
-    SENIOR_ADMIN("a", "Senior Admin", Type.ADMIN, "SrA", ChatColor.GOLD),
+    SENIOR_ADMIN("a", "Senior Admin", Type.ADMIN, "SrA", ChatColor.LIGHT_PURPLE),
+    EXECUTIVE("an", "Executive", Type.ADMIN,  "Exec", ChatColor.BLUE),
+    EXECADMINMANAGER("the", "Executive Admin Manager", Type.ADMIN, "Exec. A.M.", ChatColor.DARK_RED),
     TELNET_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
     SENIOR_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE);
     @Getter
@@ -31,8 +33,8 @@ public enum Rank implements Displayable
         this.type = type;
         this.name = name;
         this.determiner = determiner;
-        this.tag = abbr.isEmpty() ? "" : "[" + abbr + "]";
-        this.coloredTag = abbr.isEmpty() ? "" : ChatColor.DARK_GRAY + "[" + color + abbr + ChatColor.DARK_GRAY + "]" + color;
+        this.tag = abbr.isEmpty() ? "" : "(" + abbr + ")";
+        this.coloredTag = abbr.isEmpty() ? "" : ChatColor.DARK_GRAY + "(" + color + abbr + ChatColor.DARK_GRAY + ")" + color;
         this.color = color;
     }
 
@@ -92,6 +94,8 @@ public enum Rank implements Displayable
                 return TELNET_CONSOLE;
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
+            case EXECUTIVE:
+            case EXECADMINMANAGER:
                 return SENIOR_CONSOLE;
             default:
                 return null;
@@ -107,6 +111,8 @@ public enum Rank implements Displayable
                 return TELNET_ADMIN;
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
+            case EXECUTIVE:
+            case EXECADMINMANAGER:
                 return SENIOR_ADMIN;
             default:
                 return null;
