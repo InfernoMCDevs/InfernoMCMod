@@ -1,7 +1,7 @@
 package me.totalfreedom.totalfreedommod.util;
 
 import me.totalfreedom.totalfreedommod.TotalFreedomMod;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;

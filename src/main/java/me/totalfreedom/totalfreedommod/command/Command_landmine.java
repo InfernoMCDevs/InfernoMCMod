@@ -4,7 +4,7 @@ import java.util.Iterator;
 import me.totalfreedom.totalfreedommod.config.ConfigEntry;
 import me.totalfreedom.totalfreedommod.fun.Landminer.Landmine;
 import me.totalfreedom.totalfreedommod.rank.Rank;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;

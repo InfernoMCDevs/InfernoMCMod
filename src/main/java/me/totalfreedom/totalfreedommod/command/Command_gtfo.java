@@ -6,7 +6,7 @@ import me.totalfreedom.totalfreedommod.util.FUtil;
 import net.pravian.aero.util.Ips;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.command.Command;

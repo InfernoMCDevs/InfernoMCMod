@@ -3,7 +3,7 @@ package me.totalfreedom.totalfreedommod.command;
 import java.util.HashMap;
 import java.util.Map;
 import me.totalfreedom.totalfreedommod.rank.Rank;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

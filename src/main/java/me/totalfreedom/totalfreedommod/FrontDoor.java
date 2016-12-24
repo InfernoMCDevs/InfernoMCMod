@@ -22,7 +22,7 @@ import me.totalfreedom.totalfreedommod.util.FUtil;
 import net.pravian.aero.command.CommandReflection;
 import org.apache.commons.lang3.ArrayUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;

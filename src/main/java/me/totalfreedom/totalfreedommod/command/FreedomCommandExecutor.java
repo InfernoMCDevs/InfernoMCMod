@@ -10,7 +10,7 @@ import net.pravian.aero.command.executor.AbstractCommandExecutor;
 import net.pravian.aero.command.executor.AeroCommandExecutor;
 import net.pravian.aero.command.executor.AeroCommandExecutorFactory;
 import net.pravian.aero.command.handler.AeroCommandHandler;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;

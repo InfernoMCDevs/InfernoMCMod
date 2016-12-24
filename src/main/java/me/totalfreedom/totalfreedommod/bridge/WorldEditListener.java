@@ -5,7 +5,7 @@ import me.totalfreedom.totalfreedommod.util.FUtil;
 import me.StevenLawson.worldedit.LimitChangedEvent;
 import me.StevenLawson.worldedit.SelectionChangedEvent;
 import net.pravian.aero.component.PluginListener;
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 
