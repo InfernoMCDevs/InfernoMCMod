@@ -27,7 +27,7 @@ public class Command_jumppads extends FreedomCommand
             {
                 msg("Jumppads: " + (plugin.jp.getMode().isOn() ? "Enabled" : "Disabled"), ChatColor.BLUE);
                 msg("Sideways: " + (plugin.jp.getMode() == Jumppads.JumpPadMode.NORMAL_AND_SIDEWAYS ? "Enabled" : "Disabled"), ChatColor.BLUE);
-                msg("Strength: " + (plugin.jp.getStrength() * 10 - 1), ChatColor.BLUE);
+                msg("Strength: " + (plugin.jp.getStrength() * 15 - 1), ChatColor.BLUE);
                 return true;
             }
 
@@ -76,14 +76,14 @@ public class Command_jumppads extends FreedomCommand
                     return true;
                 }
 
-                if (strength > 10 || strength < 1)
+                if (strength > 15 || strength < 1)
                 {
                     msg("Invalid Strength: The strength may be 1 through 10.");
                     return true;
                 }
 
                 FUtil.adminAction(sender.getName(), "Setting Jumppads strength to: " + String.valueOf(strength), false);
-                plugin.jp.setStrength((strength / 10) + 0.1F);
+                plugin.jp.setStrength((strength / 15) + 0.1F);
             }
             else
             {
