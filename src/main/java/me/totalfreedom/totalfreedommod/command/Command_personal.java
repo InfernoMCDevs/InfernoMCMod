@@ -47,8 +47,8 @@ public class Command_personal extends FreedomCommand
             case "SpringPhoenix":
                 for (Player player : Bukkit.getOnlinePlayers())
                 {
-                    FUtil.bcastMsg(ChatColor.WHITE + "SpringPhoenix: " + ChatColor.RED + "I AM THE PHOENIX GOD");
-                    FUtil.bcastMsg(ChatColor.WHITE + "SpringPhoenix: " + ChatColor.RED + "I BRING HOME, THE DEVIL'S SWORD!");
+                    msg(ChatColor.WHITE + "SpringPhoenix: " + ChatColor.RED + "I AM THE PHOENIX GOD");
+                    msg(ChatColor.WHITE + "SpringPhoenix: " + ChatColor.RED + "I BRING HOME, THE DEVIL'S SWORD!");
                     PlayerInventory inv = player.getInventory();
                     ItemStack thedevilsword = new ItemStack(Material.DIAMOND_SWORD, 1);
                     ItemMeta meta = thedevilsword.getItemMeta();
