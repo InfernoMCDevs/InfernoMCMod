@@ -53,8 +53,8 @@ public class Command_personal extends FreedomCommand
                     ItemStack thedevilsword = new ItemStack(Material.DIAMOND_SWORD, 1);
                     ItemMeta meta = thedevilsword.getItemMeta();
                     meta.setDisplayName(ChatColor.DARK_RED + "The Phoenix Devil's Sword");
-                    meta.addEnchant(Enchantment.FIRE_ASPECT, 666, true);
-                    meta.addEnchant(Enchantment.KNOCKBACK, 666, true);
+                    meta.addEnchant(Enchantment.FIRE_ASPECT, 1, true);
+                    meta.addEnchant(Enchantment.KNOCKBACK, 1, true);
                     thedevilsword.setItemMeta(meta);
                     inv.addItem(thedevilsword);
                 }
@@ -63,7 +63,7 @@ public class Command_personal extends FreedomCommand
                 msg(sender, "your psl typh", ChatColor.GOLD);
                 break;
                 default:
-                sender.sendMessage(ChatColor.DARK_RED + "You do not have a personal command currently.");
+                sender.sendMessage(ChatColor.DARK_RED + "You do not have a personal command currently, please make a thread in the seuper admin lounge.");
                 break;
             }
         return true;
