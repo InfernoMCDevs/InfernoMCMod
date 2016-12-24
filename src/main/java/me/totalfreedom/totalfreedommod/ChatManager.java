@@ -88,7 +88,7 @@ public class ChatManager extends FreedomService
         event.setMessage(message);
 
         // Make format
-        String format = "<%1$s> %2$s";
+        String format = "%1$s: %2$s";
 
         String tag = fPlayer.getTag();
         if (tag != null && !tag.isEmpty())
@@ -103,6 +103,7 @@ public class ChatManager extends FreedomService
     public void adminChat(CommandSender sender, String message)
     {
         String name = sender.getName() + " " + plugin.rm.getDisplay(sender).getColoredTag() + ChatColor.WHITE;
+        message = ChatColor.translateAlternateColorCodes('&', message);
         FLog.info("[ADMIN] " + name + ": " + message);
 
         for (Player player : server.getOnlinePlayers())
